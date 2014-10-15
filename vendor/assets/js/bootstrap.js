@@ -2031,36 +2031,36 @@ $(document).ready(function(){
 // $('head').prepend('<link rel="stylesheet" href="assets/docs.css" type="text/css" media="screen">');
 $('body').prepend('<div id="panel"><div class="navbar navbar-inverse navbar-fixed-top" id="advanced"><span class="trigger"><strong></strong><em></em></span><div class="navbar-inner"></div></div></div>');
 }); 
- $(window).scroll(function(){if ($(this).scrollTop() > 0) {$("#advanced").css({position:'fixed'});} else {$("#advanced").css({position:'relative'});}});  
-$(function(){  
-    $.cookie("panel");  
-  $.cookie("panel2"); 
-  var strCookies = $.cookie("panel");
-  var strCookies2 = $.cookie("panel2");
-  if(strCookies=='boo')
-  {
-    if(strCookies2=='opened'){$("#advanced").css({marginTop:'0px'}).removeClass('closed')}else{$("#advanced").css({marginTop:'-40px'}).addClass('closed')}
-    $("#advanced .trigger").toggle(function(){
-      $(this).find('strong').animate({opacity:0}).parent().parent('#advanced').removeClass('closed').animate({marginTop:'0px'},"fast");
-      strCookies2=$.cookie("panel2",'opened');
-      strCookies=$.cookie("panel",null);},
-    function(){
-      $(this).find('strong').animate({opacity:1}).parent().parent('#advanced').addClass('closed').animate({marginTop:'-40px'},"fast")
-      strCookies2=$.cookie("panel2",null);
-      strCookies=$.cookie("panel",'boo');});
-  }
-  else {
-    $("#advanced").css({marginTop:'0px'}).removeClass('closed');
-    $("#advanced .trigger").toggle(function(){
-      $(this).find('strong').animate({opacity:1}).parent().parent('#advanced').addClass('closed').animate({marginTop:'-40px'},"fast");
-      strCookies2=$.cookie("panel2",null);
-      strCookies=$.cookie("panel",'boo');},
-    function(){
-      $(this).find('strong').animate({opacity:0}).parent().parent('#advanced').removeClass('closed').animate({marginTop:'0px'},"fast")
-      strCookies2=$.cookie("panel2",'opened');
-      strCookies=$.cookie("panel",null);});
-  }
-});
+//  $(window).scroll(function(){if ($(this).scrollTop() > 0) {$("#advanced").css({position:'fixed'});} else {$("#advanced").css({position:'relative'});}});  
+// $(function(){  
+//     $.cookie("panel");  
+//   $.cookie("panel2"); 
+//   var strCookies = $.cookie("panel");
+//   var strCookies2 = $.cookie("panel2");
+//   if(strCookies=='boo')
+//   {
+//     if(strCookies2=='opened'){$("#advanced").css({marginTop:'0px'}).removeClass('closed')}else{$("#advanced").css({marginTop:'-40px'}).addClass('closed')}
+//     $("#advanced .trigger").toggle(function(){
+//       $(this).find('strong').animate({opacity:0}).parent().parent('#advanced').removeClass('closed').animate({marginTop:'0px'},"fast");
+//       strCookies2=$.cookie("panel2",'opened');
+//       strCookies=$.cookie("panel",null);},
+//     function(){
+//       $(this).find('strong').animate({opacity:1}).parent().parent('#advanced').addClass('closed').animate({marginTop:'-40px'},"fast")
+//       strCookies2=$.cookie("panel2",null);
+//       strCookies=$.cookie("panel",'boo');});
+//   }
+//   else {
+//     $("#advanced").css({marginTop:'0px'}).removeClass('closed');
+//     $("#advanced .trigger").toggle(function(){
+//       $(this).find('strong').animate({opacity:1}).parent().parent('#advanced').addClass('closed').animate({marginTop:'-40px'},"fast");
+//       strCookies2=$.cookie("panel2",null);
+//       strCookies=$.cookie("panel",'boo');},
+//     function(){
+//       $(this).find('strong').animate({opacity:0}).parent().parent('#advanced').removeClass('closed').animate({marginTop:'0px'},"fast")
+//       strCookies2=$.cookie("panel2",'opened');
+//       strCookies=$.cookie("panel",null);});
+//   }
+// });
 
 /*--------- end panel *------------*/
 $(function(){
