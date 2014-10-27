@@ -1,0 +1,26 @@
+<body>
+  <div class="spinner"></div> 
+    <div class="bg-content">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <%= button_to 'Photo List', admin_photos_path, :class => 'btn btn-primary btn-lg', :method => :get%>						
+						<h3>Add a new Photo</h3>
+						<%= form_for [:admin, @photo] do |form|%>
+							<%= form.label :title%>
+							<%= form.text_field :title%>
+							<%= form.label :image%>
+							<%= form.file_field :image%>
+							<%= form.label :tags%>
+							<%= form.select :tag_list, options_for_select(Tag.all.collect{|item| [item.name, item.name]}), {}, {:multiple => true, :class => "chzn-select"}%></br>
+							<%= form.label :new_tags%>
+							<%= form.text_field :new_tags%></br>
+							Note: type new tags with comma separate</br>
+							<%= form.submit 'Submit', class: 'btn btn-primary btn-lg' %>
+						<% end%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

@@ -66,7 +66,9 @@
       </div>
  		</div>
   </header>
-
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
 	<%= yield %>
 	
 	<!--============================== footer =================================-->
@@ -78,9 +80,9 @@
           <li><a class="icon-3" href="#"></a></li>
           <li><a class="icon-4" href="#"></a></li>
         </ul>
-    		<div class="privacy pull-left">Website Template designed by <a href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a><br>Popular free website templates <a href="http://www.websitetemplatesonline.com" target="_blank">at www.WebsiteTemplatesOnline.com</a>. | <a href="http://www.getjoomlatemplatesfree.com/" title="Joomla Templates">GetJoomlaTemplatesFree.com</a>, the Smart Choice. </div>
+    		<div class="privacy pull-left">Website Owned by <a href="http://www.facebook.com/anildias" target="_blank" rel="nofollow">Dias Davis</a></div>
   		</div>
     </footer>
-	<script type="text/javascript" src="/assets/bootstrap.js"></script>
+	
 </body>
 </html>

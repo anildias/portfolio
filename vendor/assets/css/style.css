@@ -33,7 +33,7 @@ a[href^="tel:"] {
   background: url(spinner.gif) 50% 50% no-repeat #000000;
 }
 .preloader {
-  background: url(loader.gif) center center no-repeat;
+  background: url(/assets/loader.gif) center center no-repeat;
 }
 .clear {
   clear: both;

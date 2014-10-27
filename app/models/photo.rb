@@ -10,7 +10,8 @@ class Photo < ActiveRecord::Base
 			:access_type => "app_folder"},
 			:dropbox_visibility => 'public',
 			:dropbox_options => {environment: ENV["RACK_ENV"]}
+	validates_with AttachmentPresenceValidator, :attributes => :image
+	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+	acts_as_taggable
 
-validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
-	
 end
