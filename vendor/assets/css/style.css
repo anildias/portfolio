@@ -1272,3 +1272,7 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+#photo-options {
+  background: none;
+}
