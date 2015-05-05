@@ -1,7 +1,5 @@
 class Admin::PhotosController < ApplicationController
   def index
-    p "ppppppppppppppppp"
-    kkkkkkkkkkkkkkkkkkkkkk
     @photos = Photo.all
   end
 
